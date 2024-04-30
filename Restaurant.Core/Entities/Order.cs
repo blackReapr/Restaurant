@@ -12,4 +12,9 @@ public class Order:BaseEntity
 
     [Required]
     public List<OrderItem> OrderItems { get; set; }
+
+    public override string ToString()
+    {
+        return Id + " " + TotalAmount.ToString();
+    }
 }

@@ -150,6 +150,121 @@ while (isRunning)
             break;
         case MenuEnum.OrderMenu:
             OrderMenu();
+            try
+            {
+                int choice = int.Parse(Console.ReadLine());
+                switch (choice)
+                {
+                    case 0:
+                        menu = MenuEnum.MainMenu;
+                        break;
+                    case 1:
+                        Order newOrder = new();
+                        Console.WriteLine("How many items are in the order?");
+                        int count = int.Parse(Console.ReadLine());
+                        for (int i = 0; i < count; i++)
+                        {
+                            TakeMenuItem:
+                            try
+                            {
+                                Console.WriteLine("Enter the name");
+                                string name = Console.ReadLine();
+                                Console.WriteLine("Enter the price");
+                                int price = int.Parse(Console.ReadLine());
+                                Console.WriteLine("Category");
+                                Category category = (Category)int.Parse(Console.ReadLine());
+                                OrderItem orderItem = new();
+                                orderItem.MenuItem = new() { Category=category, Name=name, Price=price};
+                                newOrder.OrderItems.Add(orderItem);
+                            }
+                            catch (Exception ex)
+                            {
+                                Console.WriteLine(ex.Message);
+                                goto TakeMenuItem;
+                            }
+                        }
+                        orderService.Add(newOrder);
+                        break;
+                    case 2:
+                        try
+                        {
+                        int id = int.Parse(Console.ReadLine());
+                        orderService.Remove(id);
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        break;
+                    case 3:
+                        foreach (Order item in orderService.GetAllOrders())
+                        {
+                            Console.WriteLine(item);
+                        }
+                        break;
+                    case 4:
+                        Console.WriteLine("Enter start date");
+                        DateTime startTime = DateTime.Parse(Console.ReadLine());
+
+                        Console.WriteLine("Enter end date");
+                        DateTime endTime = DateTime.Parse(Console.ReadLine());
+
+                        try
+                        {
+                            foreach (var item in orderService.GetOrdersByDateInterval(startTime, endTime)) Console.WriteLine(item);
+                        }
+                        catch(Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        break;
+                    case 5:
+                        Console.WriteLine("Enter price date");
+                        int startPrice = int.Parse(Console.ReadLine());
+
+                        Console.WriteLine("Enter price date");
+                        int endPrice = int.Parse(Console.ReadLine());
+
+                        try
+                        {
+                            foreach (var item in orderService.GetOrdersByPriceInterval(startPrice, endPrice)) Console.WriteLine(item);
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        break;
+                    case 6:
+                        Console.WriteLine("Enter date");
+                        try
+                        {
+                            DateTime dateTime = DateTime.Parse(Console.ReadLine());
+                            foreach (var item in orderService.GetOrdersByDate(dateTime))
+                            {
+                                Console.WriteLine(item);
+                            }
+                        }
+                        catch(Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        break;
+                    case 7:
+                        try
+                        {
+                            Console.WriteLine("Enter id");
+                            int id = int.Parse(Console.ReadLine());
+                            Console.WriteLine(orderService.GetOrderByIdNumber(id));
+                        }
+                        break;
+                    default:
+                        break;
+                }
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
             break;
         default:
             break;
