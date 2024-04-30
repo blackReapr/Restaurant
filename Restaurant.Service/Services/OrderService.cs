@@ -15,6 +15,7 @@ public class OrderService
 
     void Add(Order order)
     {
+        order.TotalAmount = order.OrderItems.Sum(x => x.MenuItem.Price);
         OrderRepository.Add(order);
     }
 

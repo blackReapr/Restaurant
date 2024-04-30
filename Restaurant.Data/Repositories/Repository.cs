@@ -28,7 +28,7 @@ public class Repository<T> : IRepository<T> where T : BaseEntity
         _context.SaveChanges();
     }
 
-    public IEnumerable<T> Get(Expression<Func<T, bool>>? expression = null) => expression is null ? _table.AsNoTracking().Where(expression) : _table.AsNoTracking();
+    public IEnumerable<T> Get(Expression<Func<T, bool>>? expression = null) => expression is not null ? _table.AsNoTracking().Where(expression) : _table.AsNoTracking();
 
     public void Update(T entity)
     {

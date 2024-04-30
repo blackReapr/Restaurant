@@ -13,4 +13,9 @@ public class MenuItem: BaseEntity
 
     [Required]
     public Category Category { get; set; }
+
+    public override string ToString()
+    {
+        return Name + " " + Price;
+    }
 }

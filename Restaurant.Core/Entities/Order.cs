@@ -11,5 +11,5 @@ public class Order:BaseEntity
     public DateTime Date { get; set; }
 
     [Required]
-    List<OrderItem> OrderItems { get; set; }
+    public List<OrderItem> OrderItems { get; set; }
 }

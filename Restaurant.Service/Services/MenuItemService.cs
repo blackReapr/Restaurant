@@ -16,6 +16,7 @@ public class MenuItemService
 
     public void Add(MenuItem menuItem)
     {
+        foreach(var item in MenuItemRepository.Get(x => x.Name.Equals(menuItem.Name))) Console.WriteLine(item);
         if (MenuItemRepository.Get(x => x.Name == menuItem.Name).Count() != 0)
             throw new MenuItemAlreadyExistsException($"Menu item with name:{menuItem.Name} already exists.");
         MenuItemRepository.Add(menuItem);
@@ -27,6 +28,16 @@ public class MenuItemService
         var data = MenuItemRepository.Get(x => x.Id == id);
         if (data is null) throw new MenuItemDoesNotExist($"Order with id:{id} does not exist");
         MenuItemRepository.Delete(data as MenuItem);
+    }
+
+    public void Update(int? id, MenuItem menuItem)
+    {
+        if (id == null) throw new IdNotGivenException("Id is not given");
+        var data = MenuItemRepository.Get(x => x.Id == id);
+        if (data is null) throw new MenuItemDoesNotExist($"Order with id:{id} does not exist");
+        if (MenuItemRepository.Get(x => x.Name == menuItem.Name).Count() != 0)
+            throw new MenuItemAlreadyExistsException($"Menu item with name:{menuItem.Name} already exists.");
+        MenuItemRepository.Update(menuItem);
     }
 
     public IEnumerable<MenuItem> Get() => MenuItemRepository.Get();

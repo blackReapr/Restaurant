@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\mehem\\source\\repos\\Restaurant\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E9A61034-DEDA-4DD0-8EAA-14A55A50C860}|Restaurant\\Restaurant.csproj|c:\\users\\mehem\\source\\repos\\restaurant\\restaurant\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E9A61034-DEDA-4DD0-8EAA-14A55A50C860}|Restaurant\\Restaurant.csproj|C:\\Users\\mehem\\source\\repos\\Restaurant\\restaurant\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E9A61034-DEDA-4DD0-8EAA-14A55A50C860}|Restaurant\\Restaurant.csproj|solutionrelative:restaurant\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{150F13B4-0D37-4FEB-91F9-49AFF6D3F635}|Restaurant.Service\\Restaurant.Service.csproj|c:\\users\\mehem\\source\\repos\\restaurant\\restaurant.service\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{150F13B4-0D37-4FEB-91F9-49AFF6D3F635}|Restaurant.Service\\Restaurant.Service.csproj|solutionrelative:restaurant.service\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{150F13B4-0D37-4FEB-91F9-49AFF6D3F635}|Restaurant.Service\\Restaurant.Service.csproj|c:\\users\\mehem\\source\\repos\\restaurant\\restaurant.service\\services\\menuitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{150F13B4-0D37-4FEB-91F9-49AFF6D3F635}|Restaurant.Service\\Restaurant.Service.csproj|solutionrelative:restaurant.service\\services\\menuitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,11 +18,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MenuItemService.cs",
+              "DocumentMoniker": "C:\\Users\\mehem\\source\\repos\\Restaurant\\Restaurant.Service\\Services\\MenuItemService.cs",
+              "RelativeDocumentMoniker": "Restaurant.Service\\Services\\MenuItemService.cs",
+              "ToolTip": "C:\\Users\\mehem\\source\\repos\\Restaurant\\Restaurant.Service\\Services\\MenuItemService.cs",
+              "RelativeToolTip": "Restaurant.Service\\Services\\MenuItemService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T17:17:50.683Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -32,22 +45,9 @@
               "RelativeDocumentMoniker": "Restaurant\\Program.cs",
               "ToolTip": "C:\\Users\\mehem\\source\\repos\\Restaurant\\Restaurant\\Program.cs",
               "RelativeToolTip": "Restaurant\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "ViewState": "AQIAAIoAAAAAAAAAAAAAAJcAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-30T16:34:02.149Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "OrderService.cs",
-              "DocumentMoniker": "C:\\Users\\mehem\\source\\repos\\Restaurant\\Restaurant.Service\\Services\\OrderService.cs",
-              "RelativeDocumentMoniker": "Restaurant.Service\\Services\\OrderService.cs",
-              "ToolTip": "C:\\Users\\mehem\\source\\repos\\Restaurant\\Restaurant.Service\\Services\\OrderService.cs",
-              "RelativeToolTip": "Restaurant.Service\\Services\\OrderService.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAAB4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T16:21:30.205Z",
               "EditorCaption": ""
             }
           ]
