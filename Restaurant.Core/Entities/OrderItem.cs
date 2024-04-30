@@ -9,4 +9,7 @@ public class OrderItem:BaseEntity
 
     [Required]
     public int Count { get; set; }
+
+    [Required]
+    public Order Order { get; set; }
 }

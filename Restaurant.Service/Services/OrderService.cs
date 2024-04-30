@@ -1,5 +1,6 @@
 ﻿using Restaurant.Core.Entities;
 using Restaurant.Data.Repositories;
+using Restaurant.Service.Exceptions;
 
 namespace Restaurant.Service.Services;
 
@@ -19,7 +20,16 @@ public class OrderService
 
     void Update(int? id, Order order)
     {
-        if (order == null) throw new IdNotGivenException("Id is not given");
+        if (id == null) throw new IdNotGivenException("Id is not given");
+        if (order.Date > DateTime.Now) throw new InvalidDateException("Date is not valid");
         OrderRepository.Update(order);
     }
+
+    void Remove(int? id)
+    {
+        if (id == null) throw new IdNotGivenException("Id is not given");
+
+    }
+
+
 }
