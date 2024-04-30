@@ -1,4 +1,19 @@
-﻿Console.WriteLine("salam");
+﻿using Restaurant.Core.Enums;
+using Restaurant.Service.Services;
+
+Console.WriteLine("salam");
+
+
+MenuItemService menuItemService = new();
+
+menuItemService.Add(new()
+{
+    Name = "Soup",
+    Category = Category.Breakfast,
+    Price = 10
+});
+
+
 
 void MainMenu()
 {
